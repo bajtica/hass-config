@@ -20,6 +20,7 @@
       - input_select.scene_livingroom
       - light.living_room_lamp
       - switch.table_light
+      - switch.living_room_tv
       - media_player.living_room_radio
       - media_player.living_room_tv
       - media_player.denon_avr
@@ -33,6 +34,7 @@
       - switch.nightstand_light
       - group.spalnica
       - group.alarmclock
+      - switch.bedroom_tv
       - media_player.bedroom_kodi
       - group.kodi_remote
   kitchen_view:

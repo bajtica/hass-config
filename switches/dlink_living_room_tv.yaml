@@ -1,0 +1,5 @@
+- platform: dlink
+  host: !secret dlink_living_room_tv_ip
+  name: Living room TV
+  username: Admin
+  password: !secret dlink_living_room_tv_pin
