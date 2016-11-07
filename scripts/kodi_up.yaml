@@ -1,0 +1,2 @@
+sequence:
+- service: shell_command.kodi_up

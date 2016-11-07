@@ -1,0 +1,4 @@
+- platform: manual
+  name: "HA Alarm"
+  pending_time: 15
+  trigger_time: 1

@@ -1,0 +1,10 @@
+alias: "Visoka vlaga"
+trigger:
+  platform: numeric_state
+  entity_id: sensor.vlaga_dnevna_soba
+  above: 65
+action:
+  service: notify.ios_iphone
+  data:
+    message: "Humidity is too high, open some windows. Humidity level is {{ states.sensor.vlaga_dnevna_soba.state }}%."
+    title: "High humidity"

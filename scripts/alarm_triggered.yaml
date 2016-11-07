@@ -1,0 +1,6 @@
+sequence:
+#- service: shell_command.send_sms_motion
+- service: notify.notify
+  data:
+    message: "Movement has been detected. Check your camera."
+    title: "Movement detected"

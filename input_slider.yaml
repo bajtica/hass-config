@@ -1,0 +1,21 @@
+alarmhour:
+  name: Hour
+  icon: mdi:timer
+  initial: 6
+  min: 0
+  max: 23
+  step: 1
+alarmminutes:
+  name: Minutes
+  icon: mdi:timer
+  initial: 45
+  min: 0
+  max: 59
+  step: 1
+brightness_livingroom:
+  name: Brightness Living Room Light
+  initial: 254
+  min: 0
+  max: 254
+  step: 1
+

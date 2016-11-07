@@ -1,0 +1,6 @@
+alias: "Sleep mode off"
+trigger:
+  - platform: time
+    after: "06:45:00"
+action:
+  - service: script.sleep_mode_off

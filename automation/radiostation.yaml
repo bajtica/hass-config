@@ -1,0 +1,14 @@
+alias: Radiostation living room
+trigger:
+  - platform: state
+    entity_id: input_select.radiostation
+action:
+  - service: media_player.volume_set
+    data:
+      entity_id: media_player.living_room_radio
+      volume_level: 0.75
+  - service: media_player.play_media
+    data_template:
+      entity_id: media_player.living_room_radio
+      media_content_type: playlist
+      media_content_id: '{{ states.input_select.radiostation.state }}'

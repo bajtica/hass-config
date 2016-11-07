@@ -1,0 +1,10 @@
+alias: "Bad air living room"
+trigger:
+  platform: numeric_state
+  entity_id: sensor.zrak_dnevna_soba
+  above: 1200
+action:
+  service: notify.ios_iphone
+  data:
+    message: "Bad air in living room, open some windows, let fresh air in."
+    title: "Bad air"

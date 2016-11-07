@@ -1,0 +1,5 @@
+- platform: dlink
+  host: !secret dlink_table_ip
+  name: Table light
+  username: Admin
+  password: !secret dlink_table_pin

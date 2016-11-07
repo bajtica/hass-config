@@ -1,0 +1,9 @@
+alias: "Alarm Set Home"
+trigger:
+  - platform: state
+    entity_id: device_tracker.iphone
+    state: "home"
+#    from: "not_home"
+#    to: "home"
+action:
+  service: script.alarm_home

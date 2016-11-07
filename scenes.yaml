@@ -1,0 +1,58 @@
+- name: turn all off
+  entities:
+    group.lights: off
+    media_player.living_room_radio: off
+#    media_player.living_room_tv: off
+#    media_player.living_room_denon: off
+
+- name: evening relax music
+  entities:
+    media_player.living_room_radio: on
+    script.relax: on
+
+- name: reset lights
+  entities:
+    light.living_room:
+      state: on
+      brightness: 240
+      color_temp: 480
+      xy_color: [0.4449, 0.4066]
+    light.bedroom:
+      state: on
+      brightness: 240
+      color_temp: 480
+      xy_color: [0.4449, 0.4066]
+    light.living_room_lamp:
+      state: on
+      brightness: 240
+      color_temp: 480
+      xy_color: [0.4449, 0.4066]
+ 
+- name: daily music
+  entities:
+    media_player.living_room_radio: on
+    script.daily: on
+
+- name: sleep mode
+  entities:
+    script.sleep_mode: on
+
+- name: sleep mode off
+  entities:
+    script.sleep_mode_off: on
+
+- name: Bedroom normal
+  entities:
+    light.bedroom:
+      state: on
+      brightness: 240
+      color_temp: 480
+      xy_color: [0.4449, 0.4066]
+
+- name: Bedroom dim
+  entities:
+    light.bedroom:
+      state: on
+      brightness: 100
+      color_temp: 200
+      xy_color: [0.5294, 0.4592]

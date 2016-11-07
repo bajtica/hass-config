@@ -1,0 +1,7 @@
+- name: Office Litija
+  latitude: !secret office_litija_lat
+  longitude: !secret office_litija_lon
+
+- name: Office Celje
+  latitude: !secret office_ce_lat
+  longitude: !secret office_ce_lon

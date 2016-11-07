@@ -1,0 +1,17 @@
+alias: "Media player playing"
+trigger:
+  - platform: state
+    entity_id: media_player.bedroom_kodi
+    to: 'playing'
+condition:
+  condition: and
+  conditions:
+    - condition: state
+      entity_id: sun.sun
+      state: 'below_horizon'
+    - condition: state
+      entity_id: light.bedroom
+      state: 'on'  
+action:
+  service: scene.turn_on
+  entity_id: scene.bedroom_dim

@@ -1,0 +1,10 @@
+alias: "Nizka vlaga"
+trigger:
+  platform: numeric_state
+  entity_id: sensor.vlaga_dnevna_soba
+  below: 45
+action:
+  service: notify.ios_iphone
+  data:
+    message: "Humidity is too low, open some windows. Humidity level is {{ states.sensor.vlaga_dnevna_soba.state }}%."
+    title: "Low humidity"

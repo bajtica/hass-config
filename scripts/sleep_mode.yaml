@@ -1,0 +1,44 @@
+sequence:
+- event: LOGBOOK_ENTRY
+  event_data:
+    name: Anze
+    message: is going to bed.
+    entity_id: device_tracker.iphone
+- service: script.relax
+- delay:
+    minutes: 2
+- service: light.turn_off
+  data:
+    entity_id: light.living_room
+- service: light.turn_off
+  data:
+    entity_id: light.living_room_lamp
+- service: media_player.turn_off
+  data:
+    entity_id: media_player.living_room_denon
+- service: media_player.turn_off
+  data:
+    entity_id: media_player.living_room_tv
+- delay:
+    minutes: 9
+- service: light.turn_on
+  data:
+    entity_id: light.bedroom
+    brightness: 200
+    color_temp: 154
+    xy_color: [0.3436,0.3612]
+- service: media_player.turn_off
+  data:
+    entity_id: media_player.living_room_radio
+- service: media_player.turn_on
+  data:
+    entity_id: media_player.bedroom_kodi
+- service: alarm_control_panel.alarm_arm_home
+- delay:
+    minutes: 2
+- service: switch.turn_on
+  data:
+    entity_id: switch.nightstand_light
+- service: light.turn_off
+  data:
+    entity_id: light.bedroom

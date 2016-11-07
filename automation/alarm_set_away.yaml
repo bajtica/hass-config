@@ -1,0 +1,9 @@
+alias: "Alarm Set Away"
+trigger:
+  - platform: state
+    entity_id: device_tracker.iphone
+#    state: "not_home"
+    from: "home"
+    to: "not_home"
+action:
+  service: script.alarm_away

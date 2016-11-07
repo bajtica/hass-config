@@ -1,0 +1,26 @@
+anze_status:
+  name: Anze Status
+  options:
+   - working
+   - standby
+   - sleeping
+  initial: standby
+
+scene_livingroom:
+  name: Scene living Room Light
+  options:
+    - Select
+    - concentrate
+    - energize
+    - reading
+    - relax
+  initial: 'Select'
+
+radiostation:
+  name: Radiostation
+  options:
+    - Select
+    - val202
+    - jazz
+    - easy
+  initial: 'Select'

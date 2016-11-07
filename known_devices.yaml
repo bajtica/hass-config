@@ -1,0 +1,7 @@
+
+iphone:
+  hide_if_away: false
+  mac: null
+  name: Anze
+  picture: !secret anze_pic
+  track: true

@@ -1,0 +1,16 @@
+alias: IR Remote Play music
+trigger:
+  platform: event
+  event_type: ir_command_received
+  event_data:
+    button_name: KEY_PROG2
+action:
+  - service: media_player.volume_set
+    data:
+      entity_id: media_player.living_room_radio
+      volume_level: 0.80
+  - service: media_player.play_media
+    data_template:
+      entity_id: media_player.living_room_radio
+      media_content_type: playlist
+      media_content_id: 'val202'

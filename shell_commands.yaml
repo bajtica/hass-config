@@ -1,0 +1,8 @@
+kodi_up: 'curl -i -X POST -H "Content-Type: application/json" -d "{\"jsonrpc\": \"2.0\", \"method\": \"Input.Up\", \"id\": 1}"  http://192.168.0.119:8080/jsonrpc'
+kodi_down: 'curl -i -X POST -H "Content-Type: application/json" -d "{\"jsonrpc\": \"2.0\", \"method\": \"Input.Down\", \"id\": 1}"  http://192.168.0.119:8080/jsonrpc'
+kodi_left: 'curl -i -X POST -H "Content-Type: application/json" -d "{\"jsonrpc\": \"2.0\", \"method\": \"Input.Left\", \"id\": 1}"  http://192.168.0.119:8080/jsonrpc'
+kodi_right: 'curl -i -X POST -H "Content-Type: application/json" -d "{\"jsonrpc\": \"2.0\", \"method\": \"Input.Right\", \"id\": 1}"  http://192.168.0.119:8080/jsonrpc'
+kodi_back: 'curl -i -X POST -H "Content-Type: application/json" -d "{\"jsonrpc\": \"2.0\", \"method\": \"Input.Back\", \"id\": 1}"  http://192.168.0.119:8080/jsonrpc'
+kodi_select: 'curl -i -X POST -H "Content-Type: application/json" -d "{\"jsonrpc\": \"2.0\", \"method\": \"Input.Select\", \"id\": 1}"  http://192.168.0.119:8080/jsonrpc'
+current_temp: 'pico2wave -w /tmp/temp.wav "Current outside temperature is {{ states.sensor.netatmo_outdoor_temperature.state }}°C. The temperature in your room is {{ states.sensor.netatmo_indoor_temperature.state }}°C." && aplay /tmp/temp.wav'
+test: 'pico2wave -w /tmp/temp.wav "Hello world!" && aplay /tmp/temp.wav'

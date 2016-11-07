@@ -1,0 +1,23 @@
+- platform: kodi
+  host: !secret kodi_bedroom_ip
+  port: 8080
+  name: Bedroom Kodi
+
+- platform: kodi
+  host: !secret kodi_livingroom_ip
+  port: 8080
+  name: Living room Kodi
+
+- platform: mpd
+  host: 127.0.0.1
+  port: 6600
+  location: Living Room Radio
+
+- platform: panasonic_viera
+  host: !secret panasonic_tv_ip
+  port: 55000
+  name: Living Room TV
+
+- platform: denon
+  host: !secret denon_ip
+  name: Denon AVR

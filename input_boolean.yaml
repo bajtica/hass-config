@@ -1,0 +1,40 @@
+send:
+  name: Send list
+  initial: off
+  icon: mdi:cube-send
+beer:
+  name: Beer
+  initial: off
+  icon: mdi:beer
+milk:
+  name: Milk
+  initial: off
+  icon: mdi:food
+bread:
+  name: Bread
+  initial: off
+  icon: mdi:food
+cheese:
+  name: Cheese
+  initial: off
+  icon: mdi:food
+actimel:
+  name: Actimel
+  initial: off
+  icon: mdi:food
+sleep_mode:
+  name: Način spanja
+  initial: off
+  icon: mdi:sleep
+enable_alarm_sms:
+  name: Pošlji SMS
+  initial: on
+  icon: mdi:message
+#alarmstatus:
+#  name: Wake Me Up
+#  initial: on
+#  icon: mdi:alarm-check
+alarmweekday:
+  name: Weekdays Only
+  initial: on
+  icon: mdi:calendar

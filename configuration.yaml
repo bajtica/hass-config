@@ -1,0 +1,100 @@
+homeassistant:
+  # Name of the location where Home Assistant is running
+  name: Home
+  elevation: 286
+  # Location required to calculate the time the sun rises and sets
+  latitude: !secret lat
+  longitude: !secret lon
+  # C for Celcius, F for Fahrenheit
+  temperature_unit: C
+  # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+  time_zone: Europe/Ljubljana
+  customize: !include customize.yaml
+  unit_system: metric
+
+recorder:
+  purge_days: 14
+  db_url: !secret db_url
+
+mqtt:
+
+ifttt:
+  key: !secret ifttt_key
+
+netatmo:
+  api_key: !secret netatmo_api_key
+  secret_key: !secret netatmo_secret_key
+  username: !secret netatmo_username
+  password: !secret netatmo_password
+
+logger:
+  default: error
+  logs:
+    homeassistant.components.automation: debug
+    homeassistant.components.device_tracker: debug
+    homeassistant.components.light: info
+    homeassistant.components.climate: debug
+    homeassistant.components.script: debug
+    homeassistant.components.device_tracker.mqtt: debug
+
+http:
+  api_password: !secret api_password
+
+camera:
+  platform: generic
+  still_image_url: http://www.arso.gov.si/vreme/napovedi%20in%20podatki/radar_anim.gif
+  name: Padavine
+
+camera 2:
+  platform: generic
+  still_image_url: http://meteo.arso.gov.si/uploads/probase/www/observ/satellite/msg_ir_sateu_latest.jpg
+  name: Evropa oblacnost
+
+camera 3:
+  name: Anze
+  platform: generic
+  still_image_url: https://maps.googleapis.com/maps/api/staticmap?center={{ states.device_tracker.iphone.attributes.latitude }},{{ states.device_tracker.iphone.attributes.longitude }}&zoom=13&size=500x500&maptype=roadmap&markers=color:blue%7Clabel:P%7C{{ states.device_tracker.iphone.attributes.latitude }},{{ states.device_tracker.iphone.attributes.longitude }}
+  limit_refetch_to_url_change: true
+
+binary_sensor: !include devices/binary_sensors.yaml
+media_player: !include devices/media_players.yaml
+light: !include devices/lights.yaml
+sensor: !include devices/sensors.yaml
+scene: !include scenes.yaml
+alarm_control_panel: !include alarm_control_panel.yaml
+automation: !include automation.yaml
+script: !include scripts.yaml
+shell_command: !include shell_commands.yaml
+input_select: !include input_select.yaml
+input_slider: !include input_slider.yaml
+input_boolean: !include input_boolean.yaml
+#device_tracker: !include devices/device_trackers.yaml
+group: !include groups.yaml
+switch: !include_dir_merge_list switches
+climate: !include devices/climate.yaml
+zone: !include zone.yaml
+
+lirc:
+
+device_tracker:
+
+notify:
+  - platform: ios
+
+conversation:
+
+sun:
+
+updater:
+
+history:
+
+frontend:
+
+logbook:
+
+weather:
+  - platform: openweathermap
+    api_key: !secret weather_api_key
+    latitude: !secret weather_lat
+    longitude: !secret weather_lon

@@ -1,0 +1,13 @@
+sequence:
+- event: LOGBOOK_ENTRY
+  event_data:
+    name: Anze
+    message: every one is away. Turning things off.
+    entity_id: device_tracker.iphone
+- service: scene.turn_on
+  data:
+    entity_id: scene.turn_all_off
+- service: notify.ios_iphone
+  data:
+    message: "Turning everything off. Have a great day!"
+    title: "Away mode activated"

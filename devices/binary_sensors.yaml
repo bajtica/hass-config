@@ -1,0 +1,6 @@
+- platform: rpi_gpio
+  ports:
+    16: Motion Living room
+  pull_mode: "UP"
+  bouncetime: 1000
+  invert_logic: false

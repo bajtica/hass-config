@@ -1,0 +1,55 @@
+    device_tracker.iphone_2:
+      friendly_name: 'Anze'
+    sensor.netatmo_indoor_temperature:
+      friendly_name: Notranja temp
+    sensor.netatmo_indoor_humidity:
+      friendly_name: Notranja vlaga
+    sensor.netatmo_outdoor_temperature:
+      friendly_name: Zunanja temp
+    sensor.netatmo_outdoor_humidity:
+      friendly_name: Zunanja vlaga
+    sensor.vlaga_dnevna_soba:
+      icon: mdi:water-percent
+    sensor.vlaga_spalnica:
+      icon: mdi:water-percent
+    sensor.zrak_spalnica:
+      icon: mdi:cloud
+    sensor.zrak_dnevna_soba:
+      icon: mdi:cloud
+    sensor.svetloba_dnevna_soba:
+      icon: mdi:lightbulb
+    sensor.svetloba_spalnica:
+      icon: mdi:lightbulb
+    sensor.pritisk_dnevna_soba:
+      icon: mdi:gauge
+    sensor.pritisk_spalnica:
+      icon: mdi:gauge
+    sensor.baterija_spalnica:
+      icon: mdi:battery
+    sensor.baterija_dnevna_soba:
+      icon: mdi:battery
+    sensor.hrup_dnevna_soba:
+      icon: mdi:volume-high
+    sensor.hrup_spalnica:
+      icon: mdi:volume-high
+    input_boolean.enable_alarm_sms:
+      friendly_name: Pošlji opozorila
+    script.kodi_left:
+      friendly_name: Left
+    script.kodi_up:
+      friendly_name: Up 
+    script.kodi_right:
+      friendly_name: Right 
+    script.kodi_down:
+      friendly_name: Down 
+    script.kodi_back:
+      friendly_name: Back 
+    script.kodi_select:
+      friendly_name: Select
+    sensor.phone_to_home:
+      friendly_name: To home
+      icon: mdi:car
+    sensor.to_office_litija:
+      icon: mdi:car
+    sensor.to_office_celje:
+      icon: mdi:car

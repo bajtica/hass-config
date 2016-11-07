@@ -1,0 +1,148 @@
+#  - platform: dht
+#    sensor: DHT22
+#    pin: 23
+#    name: Dnevna soba
+#    monitored_conditions:
+#      - temperature
+#      - humidity
+
+  - platform: netatmo
+    modules:
+      Indoor:
+        - temperature
+        - humidity
+        - noise
+        - pressure
+        - co2
+      Outdoor:
+        - temperature
+        - humidity
+        - min_temp
+        - max_temp
+        - battery_vp
+
+  - platform: template
+    sensors:
+      alarm_time:
+        friendly_name: 'Time'
+        value_template: '{{ "%0.02d:%0.02d" | format(states("input_slider.alarmhour") | int, states("input_slider.alarmminutes") | int) }}'
+
+  - platform: command_line
+    command: "php /home/homeassistant/.homeassistant/custom/cubesensors.php 000D6F0003C17EE4 temp"
+    name: Temperatura dnevna soba
+    unit_of_measurement: "°C"
+
+  - platform: command_line
+    command: "php /home/homeassistant/.homeassistant/custom/cubesensors.php 000D6F0003C17EE4 humidity_proc"
+    name: Vlaga dnevna soba
+    unit_of_measurement: "%"
+
+  - platform: command_line
+    command: "php /home/homeassistant/.homeassistant/custom/cubesensors.php 000D6F0003C17EE4 light_lux"
+    name: Svetloba dnevna soba
+    unit_of_measurement: "lux"
+
+  - platform: command_line
+    command: "php /home/homeassistant/.homeassistant/custom/cubesensors.php 000D6F0003C17EE4 voc"
+    name: Zrak dnevna soba
+    unit_of_measurement: "ppm"
+
+  - platform: command_line
+    command: "php /home/homeassistant/.homeassistant/custom/cubesensors.php 000D6F0003C17EE4 pressure"
+    name: Pritisk dnevna soba
+    unit_of_measurement: "mbar"
+
+  - platform: command_line
+    command: "php /home/homeassistant/.homeassistant/custom/cubesensors.php 000D6F0003C17EE4 battery_proc"
+    name: Baterija dnevna soba
+    unit_of_measurement: "%"
+
+  - platform: command_line
+    command: "php /home/homeassistant/.homeassistant/custom/cubesensors.php 000D6F0003C17EE4 noisedba"
+    name: Hrup dnevna soba
+    unit_of_measurement: "dB"
+
+  - platform: command_line
+    command: "php /home/homeassistant/.homeassistant/custom/cubesensors.php 000D6F0004492B95 temp"
+    name: Temperatura spalnica
+    unit_of_measurement: "°C"
+
+  - platform: command_line
+    command: "php /home/homeassistant/.homeassistant/custom/cubesensors.php 000D6F0004492B95 humidity_proc"
+    name: Vlaga spalnica
+    unit_of_measurement: "%"
+
+  - platform: command_line
+    command: "php /home/homeassistant/.homeassistant/custom/cubesensors.php 000D6F0004492B95 light_lux"
+    name: Svetloba spalnica
+    unit_of_measurement: "lux"
+
+  - platform: command_line
+    command: "php /home/homeassistant/.homeassistant/custom/cubesensors.php 000D6F0004492B95 voc"
+    name: Zrak spalnica
+    unit_of_measurement: "ppm"
+
+  - platform: command_line
+    command: "php /home/homeassistant/.homeassistant/custom/cubesensors.php 000D6F0004492B95 pressure"
+    name: Pritisk spalnica
+    unit_of_measurement: "mbar"
+
+  - platform: command_line
+    command: "php /home/homeassistant/.homeassistant/custom/cubesensors.php 000D6F0004492B95 battery_proc"
+    name: Baterija spalnica
+    unit_of_measurement: "%"
+
+  - platform: command_line
+    command: "php /home/homeassistant/.homeassistant/custom/cubesensors.php 000D6F0004492B95 noisedba"
+    name: Hrup spalnica
+    unit_of_measurement: "dB"
+
+  - platform: template
+    sensors:
+      alarm_time:
+        friendly_name: 'Time'
+        value_template: '{{ "%0.02d:%0.02d" | format(states("input_slider.alarmhour") | int, states("input_slider.alarmminutes") | int) }}'
+
+  - platform: time_date
+    display_options:
+      - 'time'
+      - 'date'
+      - 'date_time'
+      - 'time_date'
+      - 'time_utc'
+
+  - platform: google_travel_time
+    name: Phone To Home
+    api_key: !secret google_travel_api
+    origin: device_tracker.iphone
+    destination: zone.home
+
+  - platform: google_travel_time
+    name: To Office Litija
+    api_key: !secret google_travel_api   
+    origin: device_tracker.iphone
+    destination: zone.office_litija
+
+  - platform: google_travel_time
+    name: To Office Celje
+    api_key: !secret google_travel_api
+    origin: device_tracker.iphone
+    destination: zone.office_celje
+
+  - platform: mqtt
+    name: "Temperature"
+    state_topic: "sensor/temperature"
+    qos: 0
+    unit_of_measurement: "ºC"
+
+  - platform: mqtt
+    name: "Humidity"
+    state_topic: "sensor/humidity"
+    qos: 0
+    unit_of_measurement: "%"
+
+  - platform: mqtt
+    name: "CO"
+    state_topic: "sensor/co"
+    qos: 0
+    unit_of_measurement: "ppm"

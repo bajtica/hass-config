@@ -1,0 +1,36 @@
+- !include automation/alarm_set_away.yaml
+- !include automation/alarm_trigger.yaml
+- !include automation/alarm_set_home.yaml
+- !include automation/check_for_update.yaml
+
+#location based
+- !include automation/away.yaml
+
+#sensor based
+- !include automation/humidity_high.yaml
+- !include automation/humidity_low.yaml
+- !include automation/alarm_clock.yaml
+- !include automation/cubesensors_battery.yaml
+- !include automation/cubesensors_battery_dnevna.yaml
+- !include automation/badair_dnevna.yaml
+- !include automation/badair_spalnica.yaml
+
+#input based
+- !include automation/sleep_mode.yaml
+- !include automation/livingroom_light.yaml
+- !include automation/radiostation.yaml
+
+#sun based
+#- !include automation/sleep_mode_off.yaml
+#- !include automation/sun_notifications.yaml
+
+#media player
+- !include automation/media_bedroom_pause.yaml
+- !include automation/media_bedroom_play.yaml
+
+#thermostat based
+- !include automation/pec_on.yaml
+- !include automation/pec_off.yaml
+
+#ir remote based
+- !include automation/remote_music.yaml

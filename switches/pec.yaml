@@ -1,0 +1,8 @@
+- platform: command_line
+  switches:
+    main_switch:
+      command_on: "curl -X POST -H \"Content-Type: application/json\" -d '{\"entity_id\": \"switch.test\"}' http://192.168.0.111:8123/api/services/switch/turn_on"
+      command_off: "curl -X POST -H \"Content-Type: application/json\" -d '{\"entity_id\": \"switch.test\"}' http://192.168.0.111:8123/api/services/switch/turn_off"
+      friendly_name: Glavno stikalo peci
+      command_state: "curl -X GET -H \"Content-Type: application/json\" http://192.168.0.111:8123/api/states/switch.test"
+      value_template: '{{ value_json.state == "on" }}'

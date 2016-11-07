@@ -1,0 +1,17 @@
+alias: "Alarm Trigger"
+trigger:
+  - platform: state
+    entity_id: binary_sensor.motion_living_room
+    to: 'on'
+condition:
+  - condition: state
+    entity_id: alarm_control_panel.ha_alarm
+    state: 'armed_away'
+  - condition: state
+    entity_id: device_tracker.iphone
+    state: 'not_home'
+  - condition: state
+    entity_id: input_boolean.enable_alarm_sms
+    state: 'on'
+action:
+  service: script.alarm_triggered

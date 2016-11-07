@@ -1,0 +1,5 @@
+- platform: dlink
+  host: !secret dlink_bedroom_ip
+  name: Nightstand light
+  username: Admin
+  password: !secret dlink_bedroom_pin

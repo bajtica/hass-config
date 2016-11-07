@@ -1,0 +1,180 @@
+  default_view:
+    name: Home
+    view: yes
+    entities:
+      - group.today
+      - group.thermostat
+      - group.lights
+      - group.me
+      - group.alarm
+      - group.travel
+      - group.radio_group
+      - camera.anze
+  livingroom_view:
+    name: Living Room
+    view: yes
+    icon: mdi:television
+    entities:
+      - group.dnevna
+      - light.living_room
+      - input_select.scene_livingroom
+      - light.living_room_lamp
+      - switch.table_light
+      - media_player.living_room_radio
+      - media_player.living_room_tv
+      - media_player.denon_avr
+      - media_player.living_room_kodi
+  bedroom_view:
+    name: Bedroom
+    view: yes
+    icon: mdi:hotel
+    entities:
+      - light.bedroom
+      - switch.nightstand_light
+      - group.spalnica
+      - group.alarmclock
+      - media_player.bedroom_kodi
+      - group.kodi_remote
+  kitchen_view:
+    name: Kitchen
+    view: yes
+    icon: mdi:fridge
+    entities:
+      - group.indoor_weather
+  scene_view:
+    name: Scenes
+    view: yes
+    icon: mdi:movie
+    entities:
+      - group.scenes
+  weather_view:
+    name: Weather
+    view: yes
+    icon: mdi:weather-cloudy
+    entities:
+      - group.outdoor_weather
+      - group.weather_cams
+      - group.thermostat_2
+      - weather.openweathermap
+      - sensor.temperature
+      - sensor.humidity
+      - sensor.co
+
+#groups:
+  today:
+    - sensor.time
+    - sensor.date
+    - sun.sun
+    - sensor.netatmo_outdoor_temperature
+    - sensor.netatmo_outdoor_humidity
+    - sensor.netatmo_indoor_pressure
+  thermostat:
+    - climate.thermostat
+    - switch.glavno_stikalo_peci
+  me:
+    - device_tracker.iphone
+    - sensor.iphone_battery_level
+    - input_boolean.sleep_mode
+  lights:
+    - light.living_room
+    - light.living_room_lamp
+    - light.bedroom
+  radio group:
+    - media_player.living_room_radio
+    - input_select.radiostation
+  media players:
+    - media_player.bedroom_kodi
+    - media_player.living_room_radio
+    - media_player.living_room_tv
+    - media_player.living_room_denon
+    - media_player.living_room_kodi
+  temperature:
+    - sensor.dnevna_soba_humidity
+    - sensor.dnevna_soba_temperature
+  alarm:
+    - alarm_control_panel.ha_alarm
+#    - binary_sensor.motion_living_room
+    - input_boolean.enable_alarm_sms
+  inputs:
+    - input_select.anze_status
+  indoor weather:
+    - sensor.netatmo_indoor_temperature
+    - sensor.netatmo_indoor_humidity
+    - sensor.netatmo_indoor_noise
+    - sensor.netatmo_indoor_co2
+  outdoor weather:
+    - sensor.netatmo_outdoor_temperature
+    - sensor.netatmo_outdoor_humidity
+    - sensor.netatmo_outdoor_min_temp
+    - sensor.netatmo_outdoor_max_temp
+    - sensor.netatmo_indoor_pressure
+    - sensor.netatmo_outdoor_battery
+  media bedroom:
+    - media_player.bedroom_kodi
+  weather cams:
+    - camera.padavine
+    - camera.evropa_oblacnost
+  scenes:
+    - scene.all_off
+    - scene.daily_music
+    - scene.evening_relax_music
+    - scene.reset_lights
+    - scene.sleep_mode
+    - scene.sleep_mode_off
+  weather:
+    - sensor.netatmo_outdoor_temperature
+    - sensor.netatmo_outdoor_humidity
+    - sensor.netatmo_indoor_pressure
+    - sensor.netatmo_indoor_temperature
+    - sensor.netatmo_indoor_humidity
+    - sensor.netatmo_indoor_co2
+  dnevna:
+    - sensor.temperatura_dnevna_soba
+    - sensor.vlaga_dnevna_soba
+    - sensor.svetloba_dnevna_soba
+    - sensor.zrak_dnevna_soba
+    - sensor.pritisk_dnevna_soba
+    - sensor.baterija_dnevna_soba
+    - sensor.hrup_dnevna_soba
+  spalnica:
+    - sensor.temperatura_spalnica
+    - sensor.vlaga_spalnica
+    - sensor.svetloba_spalnica
+    - sensor.zrak_spalnica
+    - sensor.pritisk_spalnica
+    - sensor.baterija_spalnica
+    - sensor.hrup_spalnica
+  alarmclock:
+    name: Wake Me Up
+    entities:
+      - automation.wake_me_up
+      - sensor.alarm_time
+      - input_slider.alarmhour
+      - input_slider.alarmminutes
+      - input_boolean.alarmweekday
+  kodi remote:
+    - script.kodi_select
+    - script.kodi_back
+    - script.kodi_up
+    - script.kodi_down
+    - script.kodi_left
+    - script.kodi_right
+  media livingroom:
+    - media_player.living_room_radio
+    - media_player.living_room_tv
+#    - media_player.living_room_denon
+    - media_player.denon_avr
+    - media_player.living_room_kodi
+#  anze:
+#    - device_tracker.7fc31d9a6e8647ae972d36885526bd64
+#    - device_tracker.pebble_time_6aae
+#    - device_tracker.iphone
+  travel:
+    - sensor.phone_to_home
+    - sensor.to_office_litija
+    - sensor.to_office_celje
+  thermostat_2:
+    - climate.thermostat
+    - switch.glavno_stikalo_peci
+    - automation.pec_on
+    - automation.pec_off

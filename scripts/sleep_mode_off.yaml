@@ -1,0 +1,30 @@
+sequence:
+- event: LOGBOOK_ENTRY
+  event_data:
+    name: Anze
+    message: is waking up. Rise and shine. Good morning!
+    entity_id: device_tracker.iphone
+- service: light.turn_on
+  data:
+    entity_id: light.bedroom
+    transition: 600
+    brightness: 255
+    color_temp: 480
+    xy_color: [0.4449, 0.4066]
+- service: alarm_control_panel.alarm_disarm
+- service: media_player.volume_set
+  data:
+    entity_id: media_player.living_room_radio
+    volume_level: 0.95
+- service: media_player.play_media
+  data:
+    entity_id: media_player.living_room_radio
+    media_content_type: playlist
+    media_content_id: val202
+- service: homeassistant.turn_off
+  data:
+    entity_id: input_boolean.sleep_mode
+- service: notify.ios_iphone
+  data_template:
+    title: Current temperature
+    message: Current outside temperature is {{ states.sensor.netatmo.outdoor_temperature.state }}°C

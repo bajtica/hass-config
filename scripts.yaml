@@ -1,0 +1,16 @@
+alarm_away:  !include scripts/alarm_away.yaml
+alarm_home:  !include scripts/alarm_home.yaml
+alarm_triggered: !include scripts/alarm_triggered.yaml
+
+####GLOBAL SCRIPTS####
+all_off: !include scripts/all_off.yaml
+daily: !include scripts/daily.yaml
+relax: !include scripts/relax.yaml
+sleep_mode: !include scripts/sleep_mode.yaml
+sleep_mode_off: !include scripts/sleep_mode_off.yaml
+kodi_up: !include scripts/kodi_up.yaml
+kodi_down: !include scripts/kodi_down.yaml
+kodi_left: !include scripts/kodi_left.yaml
+kodi_right: !include scripts/kodi_right.yaml
+kodi_select: !include scripts/kodi_select.yaml
+kodi_back: !include scripts/kodi_back.yaml

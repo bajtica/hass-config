@@ -1,0 +1,10 @@
+alias: "Cubesensors dnevna"
+trigger:
+  platform: numeric_state
+  entity_id: sensor.baterija_dnevna_soba
+  below: 10
+action:
+  service: notify.ios_iphone
+  data:
+    message: "Cubesensors in livingroom has low battery. Charge it as soon as possible."
+    title: "Cubesensors battery low"

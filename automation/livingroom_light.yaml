@@ -1,0 +1,9 @@
+alias: Bedroom Light - Custom
+trigger:
+  - platform: state
+    entity_id: input_select.scene_livingroom
+action:
+  service: light.turn_on
+  data_template:
+    entity_id: light.living_room
+    profile: '{{ states.input_select.scene_livingroom.state | string }}'

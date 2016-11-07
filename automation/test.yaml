@@ -1,0 +1,9 @@
+alias: Off on Remote
+trigger:
+  platform: event
+  event_type: ir_command_received
+  event_data:
+    button_name: KEY_0
+action:
+  service: homeassistant.turn_off
+  entity_id: group.lights

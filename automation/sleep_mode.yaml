@@ -1,0 +1,7 @@
+alias: "Sleep mode"
+trigger:
+  - platform: state
+    entity_id: input_boolean.sleep_mode
+    state: "on"
+action:
+  service: script.sleep_mode
