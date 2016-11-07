@@ -4,6 +4,9 @@ sequence:
     name: Anze
     message: is going to bed.
     entity_id: device_tracker.iphone
+- service: switch.turn_off
+  data:
+    entity_id: switch.table_light    
 - service: script.relax
 - delay:
     minutes: 2
