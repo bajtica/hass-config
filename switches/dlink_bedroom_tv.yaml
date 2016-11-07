@@ -1,5 +1,5 @@
 - platform: dlink
   host: !secret dlink_bedroom_tv_ip
-  name: Bedroom  TV
+  name: Bedroom TV
   username: Admin
   password: !secret dlink_bedroom_tv_pin
