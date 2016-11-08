@@ -56,3 +56,27 @@
       brightness: 100
       color_temp: 200
       xy_color: [0.5294, 0.4592]
+
+- name: Living room dim
+  entities:
+    light.living_room:
+      state: on
+      brightness: 100
+      color_temp: 200
+      xy_color: [0.5294, 0.4592]
+    light.living_room_lamp: off
+    switch.table_light: off
+
+- name: Living room  normal
+  entities:
+    light.living_room:
+      state: on
+      brightness: 240
+      color_temp: 480
+      xy_color: [0.4449, 0.4066]
+    light.living_room_lamp:
+      state: on
+      brightness: 240
+      color_temp: 480
+      xy_color: [0.4449, 0.4066]
+

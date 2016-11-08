@@ -1,0 +1,13 @@
+alias: "Media player off"
+trigger:
+  - platform: state
+    entity_id: media_player.bedroom_kodi
+    from: 'playing'
+    to: 'idle'
+    for:
+      hours: 0
+      minutes: 5
+      seconds: 0
+action:
+  service: switch.turn_off
+  entity_id: switch.bedroom_tv, switch.nightstand_light

@@ -27,6 +27,9 @@
 #media player
 - !include automation/media_bedroom_pause.yaml
 - !include automation/media_bedroom_play.yaml
+- !include automation/media_bedroom_off.yaml
+- !include automation/media_livingroom_play.yaml
+- !include automation/media_living_room_pause.yaml
 
 #thermostat based
 - !include automation/pec_on.yaml

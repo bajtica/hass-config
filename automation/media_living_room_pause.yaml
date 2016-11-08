@@ -1,0 +1,18 @@
+alias: "Media player living room paused/stopped"
+trigger:
+  - platform: state
+    entity_id: media_player.living_room_kodi
+    from: 'playing'
+    to: 'paused'
+condition:
+  condition: and
+  conditions:
+    - condition: state
+      entity_id: sun.sun
+      state: 'below_horizon'
+    - condition: state
+      entity_id: light.living_Room
+      state: 'on'
+action:
+  service: scene.turn_on
+  entity_id: scene.living_room_normal
