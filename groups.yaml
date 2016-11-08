@@ -49,6 +49,7 @@
     icon: mdi:movie
     entities:
       - group.scenes
+      - group.automations
   weather_view:
     name: Weather
     view: yes
@@ -180,3 +181,8 @@
     - switch.glavno_stikalo_peci
     - automation.pec_on
     - automation.pec_off
+  automations:
+    - automation.media_player_living_room_playing
+    - automation.media_player_living_room_pausedstopped
+    - automation.media_player_playing
+    - automation.media_player_pausedstopped
