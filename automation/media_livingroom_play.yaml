@@ -1,4 +1,4 @@
-alias: "Media player playing"
+alias: "Media player living room playing"
 trigger:
   - platform: state
     entity_id: media_player.living_room_kodi

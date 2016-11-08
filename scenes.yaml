@@ -67,7 +67,7 @@
     light.living_room_lamp: off
     switch.table_light: off
 
-- name: Living room  normal
+- name: Living room normal
   entities:
     light.living_room:
       state: on
