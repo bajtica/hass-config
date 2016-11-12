@@ -40,6 +40,8 @@
 - !include automation/media_bedroom_off.yaml
 - !include automation/media_livingroom_play.yaml
 - !include automation/media_living_room_pause.yaml
+- !include automation/media_bedroom_on.yaml
+- !include automation/media_living_room_on.yaml
 
 #thermostat based
 - !include automation/pec_on.yaml
@@ -47,3 +49,7 @@
 
 #ir remote based
 - !include automation/remote_music.yaml
+
+#time base
+- !include automation/alarm_weekend.yaml
+- !include automation/alarm_weekdays.yaml

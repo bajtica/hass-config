@@ -1,0 +1,21 @@
+alias: 'Alarm clock for weekends'
+trigger:
+  platform: time
+  minutes: '/5'
+condition: 
+  condition: time
+  weekday:
+    - mon
+    - tue
+    - wed
+    - thu
+    - fri
+action:
+  - service: input_slider.select_value
+    data:
+      entity_id: input_slider.alarmhour
+      value: '6'
+  - service: input_slider.select_value
+    data:
+      entity_id: input_slider.alarmminutes
+      value: '45'

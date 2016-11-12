@@ -15,5 +15,3 @@ condition:
 action:
   - service: scene.turn_on
     entity_id: scene.bedroom_dim
-  - service: switch.turn_on
-    entity_id: switch.bedroom_tv

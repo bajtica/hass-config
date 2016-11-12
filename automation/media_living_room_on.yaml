@@ -1,0 +1,9 @@
+
+alias: "Media player living room on"
+trigger:
+  - platform: state
+    entity_id: media_player.living_room_kodi
+    to: 'playing'
+action:
+  - service: switch.turn_on
+    entity_id: switch.living_room_tv

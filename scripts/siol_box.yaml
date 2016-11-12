@@ -1,0 +1,2 @@
+sequence:
+- service: shell_command.siol_box_on_off

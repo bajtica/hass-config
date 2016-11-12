@@ -24,8 +24,7 @@
     view: yes
     icon: mdi:hotel
     entities:
-      - light.bedroom
-      - switch.nightstand_light
+      - group.bedroom_lights
       - group.spalnica
       - group.alarmclock
       - switch.bedroom_tv
@@ -148,6 +147,9 @@
       - input_slider.alarmhour
       - input_slider.alarmminutes
       - input_boolean.alarmweekday
+  bedroom lights:
+    - light.bedroom
+    - switch.nightstand_light
   kodi remote:
     - script.kodi_select
     - script.kodi_back
@@ -185,7 +187,8 @@
 #    - input_select.siol_box_channel
     - switch.living_room_tv
     - input_select.siol_box_channel_name
-    - switch.siol_box
+    - script.siol_box
+#    - switch.siol_box
   lights living room:
     - light.living_room
     - input_select.scene_livingroom

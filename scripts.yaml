@@ -14,3 +14,4 @@ kodi_left: !include scripts/kodi_left.yaml
 kodi_right: !include scripts/kodi_right.yaml
 kodi_select: !include scripts/kodi_select.yaml
 kodi_back: !include scripts/kodi_back.yaml
+siol_box: !include scripts/siol_box.yaml

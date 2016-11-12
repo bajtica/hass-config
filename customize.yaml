@@ -57,6 +57,10 @@
       icon: mdi:lightbulb
     switch.living_room_tv:
       icon: mdi:television
-    switch.siol_box:
-      friendly_name: Siol BOX
+    script.siol_box:
+      friendly_name: Siol BOX ON/OFF
       icon: mdi:television
+    switch.bedroom_tv:
+      icon: mdi:television
+    switch.nightstand_light:
+      icon: mdi:lightbulb

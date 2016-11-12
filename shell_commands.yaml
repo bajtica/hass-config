@@ -7,3 +7,4 @@ kodi_select: 'curl -i -X POST -H "Content-Type: application/json" -d "{\"jsonrpc
 current_temp: 'pico2wave -w /tmp/temp.wav "Current outside temperature is {{ states.sensor.netatmo_outdoor_temperature.state }}°C. The temperature in your room is {{ states.sensor.netatmo_indoor_temperature.state }}°C." && aplay /tmp/temp.wav'
 test: 'pico2wave -w /tmp/temp.wav "Hello world!" && aplay /tmp/temp.wav'
 siol_channel: 'python /home/homeassistant/.homeassistant/custom/siol/channel.py 192.168.0.240 {{states.input_select.siol_box_channel.state}}'
+siol_box_on_off: 'python /home/homeassistant/.homeassistant/custom/siol/key.py 192.168.0.240 on_off'
