@@ -2,6 +2,7 @@ alias: 'Alarm clock for weekends'
 trigger:
   platform: time
   minutes: '/5'
+  seconds: 0
 condition: 
   condition: time
   weekday:
