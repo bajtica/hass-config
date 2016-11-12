@@ -1,0 +1,6 @@
+alias: "Siol Channel"
+trigger:
+  - platform: state
+    entity_id: input_select.siol_box_channel
+action:
+  - service: shell_command
