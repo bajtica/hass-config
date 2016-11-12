@@ -1,0 +1,5 @@
+- platform: command_line
+  switches:
+    siol_box:
+      command_on: 'python /home/homeassistant/.homeassistant/custom/siol/key.py 192.168.0.240 on_off'
+      command_off: 'python /home/homeassistant/.homeassistant/custom/siol/key.py 192.168.0.240 on_off'

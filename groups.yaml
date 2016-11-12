@@ -16,15 +16,9 @@
     icon: mdi:television
     entities:
       - group.dnevna
-      - light.living_room
-      - input_select.scene_livingroom
-      - light.living_room_lamp
-      - switch.table_light
-      - switch.living_room_tv
-      - media_player.living_room_radio
-      - media_player.living_room_tv
-      - media_player.denon_avr
-      - media_player.living_room_kodi
+      - group.siol_box
+      - group.media_players_living_room
+      - group.lights_living_room
   bedroom_view:
     name: Bedroom
     view: yes
@@ -57,7 +51,6 @@
     entities:
       - group.outdoor_weather
       - group.weather_cams
-      - group.thermostat_2
       - weather.openweathermap
       - sensor.temperature
       - sensor.humidity
@@ -184,5 +177,22 @@
   automations:
     - automation.media_player_living_room_playing
     - automation.media_player_living_room_pausedstopped
-    - automation.media_player_playing
-    - automation.media_player_pausedstopped
+    - automation.media_player_bedroom_playing
+    - automation.media_player_bedroom_pausedstopped
+    - automation.pec_on
+    - automation.pec_off
+  siol box:
+#    - input_select.siol_box_channel
+    - switch.living_room_tv
+    - input_select.siol_box_channel_name
+    - switch.siol_box
+  lights living room:
+    - light.living_room
+    - input_select.scene_livingroom
+    - light.living_room_lamp
+    - switch.table_light
+  media players living room:
+    - media_player.living_room_radio
+#    - media_player.living_room_tv
+    - media_player.denon_avrx2200w
+    - media_player.living_room_kodi

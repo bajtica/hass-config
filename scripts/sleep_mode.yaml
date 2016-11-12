@@ -25,6 +25,9 @@ sequence:
 - service: media_player.turn_off
   data:
     entity_id: media_player.living_room_tv
+- service: media_player.turn_off
+  data:
+    entity_id: media_player.denon_avrx2200w
 - delay:
     minutes: 9
 - service: light.turn_on

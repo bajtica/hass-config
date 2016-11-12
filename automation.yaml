@@ -19,6 +19,16 @@
 - !include automation/sleep_mode.yaml
 - !include automation/livingroom_light.yaml
 - !include automation/radiostation.yaml
+- !include automation/siol_channel.yaml
+- !include automation/siol_input_tv_slo_1.yaml
+- !include automation/siol_input_tv_slo_2.yaml
+- !include automation/siol_input_pop_tv.yaml
+- !include automation/siol_input_kanal_a.yaml
+- !include automation/siol_input_discovery.yaml
+- !include automation/siol_input_id.yaml
+- !include automation/siol_input_ng.yaml
+- !include automation/siol_input_rtl.yaml
+- !include automation/siol_input_none.yaml
 
 #sun based
 #- !include automation/sleep_mode_off.yaml

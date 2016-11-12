@@ -1,4 +1,4 @@
-alias: "Media player paused/stopped"
+alias: "Media player bedroom paused/stopped"
 trigger:
   - platform: state
     entity_id: media_player.bedroom_kodi

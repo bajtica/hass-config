@@ -53,3 +53,10 @@
       icon: mdi:car
     sensor.to_office_celje:
       icon: mdi:car
+    switch.table_light:
+      icon: mdi:lightbulb
+    switch.living_room_tv:
+      icon: mdi:television
+    switch.siol_box:
+      friendly_name: Siol BOX
+      icon: mdi:television

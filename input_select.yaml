@@ -15,6 +15,7 @@ scene_livingroom:
     - reading
     - relax
   initial: 'Select'
+  icon: mdi:lightbulb
 
 radiostation:
   name: Radiostation
@@ -24,3 +25,33 @@ radiostation:
     - jazz
     - easy
   initial: 'Select'
+
+siol_box_channel:
+  name: Siol BOX Channel
+  options:
+  - None
+  - 1
+  - 2 
+  - 4
+  - 8
+  - 90
+  - 93
+  - 101
+  - 316
+  initial: None
+  icon: mdi:television
+
+siol_box_channel_name:
+  name: Siol BOX Channel
+  options:
+  - None
+  - TV SLO 1
+  - TV SLO 2
+  - POP TV
+  - KANAL A
+  - Discovery Channel
+  - Discovery ID Extra
+  - National Geographic
+  - RTL
+  initial: None
+  icon: mdi:television

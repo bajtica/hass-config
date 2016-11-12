@@ -2,7 +2,6 @@ alias: "Media player off"
 trigger:
   - platform: state
     entity_id: media_player.bedroom_kodi
-    from: 'playing'
     to: 'idle'
     for:
       hours: 0

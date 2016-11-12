@@ -1,0 +1,10 @@
+alias: "Siol discovery channel"
+trigger:
+  platform: state
+  entity_id: 'input_select.siol_box_channel_name'
+  to: "Discovery Channel"
+action:
+  service: input_select.select_option
+  data:
+    entity_id: input_select.siol_box_channel
+    option: "90"

@@ -1,0 +1,10 @@
+alias: "Siol kanal a"
+trigger:
+  platform: state
+  entity_id: 'input_select.siol_box_channel_name'
+  to: "KANAL A"
+action:
+  service: input_select.select_option
+  data:
+    entity_id: input_select.siol_box_channel
+    option: "8"
