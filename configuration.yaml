@@ -90,6 +90,9 @@ sun:
 updater:
 
 history:
+  include:
+    domains:
+      - sensor
 
 frontend:
 
