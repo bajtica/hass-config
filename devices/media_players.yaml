@@ -21,6 +21,9 @@
 #- platform: denon_avr
 #  host: !secret denon_ip
 #  name: Denon AVR
+- platform: denon
+  host: !secret denon_ip
+  name: Denon
 
 - platform: denonavr
   host: !secret denon_ip

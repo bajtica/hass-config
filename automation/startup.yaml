@@ -1,0 +1,8 @@
+alias: "HASS Startup"
+trigger:
+  - platform: event
+    event_type: homeassistant_start
+action:
+  - service: notify.ios_iphone
+    data:
+      message: "request_location_updates"

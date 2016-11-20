@@ -65,7 +65,7 @@
     - sensor.netatmo_indoor_pressure
   thermostat:
     - climate.thermostat
-    - switch.glavno_stikalo_peci
+#    - switch.glavno_stikalo_peci
   me:
     - device_tracker.iphone
     - sensor.iphone_battery_level
@@ -199,3 +199,5 @@
 #    - media_player.living_room_tv
     - media_player.denon_avrx2200w
     - media_player.living_room_kodi
+  total consumption:  
+    - sensor.total_consumption

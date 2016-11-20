@@ -1,27 +1,3 @@
-send:
-  name: Send list
-  initial: off
-  icon: mdi:cube-send
-beer:
-  name: Beer
-  initial: off
-  icon: mdi:beer
-milk:
-  name: Milk
-  initial: off
-  icon: mdi:food
-bread:
-  name: Bread
-  initial: off
-  icon: mdi:food
-cheese:
-  name: Cheese
-  initial: off
-  icon: mdi:food
-actimel:
-  name: Actimel
-  initial: off
-  icon: mdi:food
 sleep_mode:
   name: Način spanja
   initial: off

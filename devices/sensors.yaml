@@ -146,3 +146,9 @@
     state_topic: "sensor/co"
     qos: 0
     unit_of_measurement: "ppm"
+
+  - platform: template
+    sensors:
+      total_consumption:
+        value_template: '{{ states.switch.living_room_tv.attributes["Total Consumption"] }}'
+        friendly_name: 'Total consumption'
